@@ -1,0 +1,2 @@
+timestamp,alarm_id,domain,entity_id,entity_type,severity,probable_cause,specific_problem,description,correlation_id,scenario,synthetic
+2026-01-01T00:15:00Z,syn-alarm-ran_congestion-001,ran,syn-cell-01-001-01,cell,major,High PRB utilization,Reduced radio throughput and elevated call drops,Synthetic ran congestion alarm for syn-cell-01-001-01.,syn-corr-ran_congestion-001,ran_congestion,True

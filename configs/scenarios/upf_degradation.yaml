@@ -1,0 +1,3 @@
+name: upf_degradation
+description: User-plane latency and packet loss degradation around an affected UPF.
+

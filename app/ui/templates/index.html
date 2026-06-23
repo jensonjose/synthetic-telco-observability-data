@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel">
+  <h1>Synthetic Telco Observability Data</h1>
+  <form method="post" action="/generate" class="grid">
+    <label>Scenario
+      <select name="scenario">
+        {% for scenario in scenarios %}
+        <option value="{{ scenario.name }}">{{ scenario.name }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label>Duration hours <input name="duration_hours" type="number" value="2" min="1"></label>
+    <label>Interval minutes <input name="interval_minutes" type="number" value="15" min="1"></label>
+    <label>Regions <input name="regions" type="number" value="1" min="1"></label>
+    <label>Sites per region <input name="sites_per_region" type="number" value="2" min="1"></label>
+    <label>Cells per site <input name="cells_per_site" type="number" value="2" min="1"></label>
+    <label>Seed <input name="seed" type="number" value="42" min="0"></label>
+    <button type="submit">Generate Dataset</button>
+  </form>
+</section>
+<section>
+  <h2>Scenarios</h2>
+  <table>
+    {% for scenario in scenarios %}
+    <tr><td>{{ scenario.name }}</td><td>{{ scenario.description }}</td></tr>
+    {% endfor %}
+  </table>
+</section>
+{% endblock %}
+

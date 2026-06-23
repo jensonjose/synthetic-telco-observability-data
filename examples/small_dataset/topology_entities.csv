@@ -1,0 +1,38 @@
+id,type,name,region,status,parent_id,child_ids,capacity,coordinates,attributes,synthetic
+syn-amf-01-01,amf,AMF 1,Synthetic Region 1,active,syn-k8s-01-edge,"[""syn-pod-amf-01-01"", ""syn-pod-amf-01-02""]","{""sessions"": 100000}",,{},True
+syn-cell-01-001-01,cell,Cell R1S1C1,Synthetic Region 1,degraded,syn-gnb-01-001,"[""syn-link-01-001-01""]","{""bandwidth_mhz"": 100, ""max_users"": 1200}","{""latitude"": 14.61824, ""longitude"": 72.58835}",{},True
+syn-cell-01-001-02,cell,Cell R1S1C2,Synthetic Region 1,active,syn-gnb-01-001,"[""syn-link-01-001-02""]","{""bandwidth_mhz"": 100, ""max_users"": 1200}","{""latitude"": 14.69609, ""longitude"": 72.29347}",{},True
+syn-cell-01-002-01,cell,Cell R1S2C1,Synthetic Region 1,active,syn-gnb-01-002,"[""syn-link-01-002-01""]","{""bandwidth_mhz"": 100, ""max_users"": 1200}","{""latitude"": 14.35932, ""longitude"": 72.50268}",{},True
+syn-cell-01-002-02,cell,Cell R1S2C2,Synthetic Region 1,active,syn-gnb-01-002,"[""syn-link-01-002-02""]","{""bandwidth_mhz"": 100, ""max_users"": 1200}","{""latitude"": 14.26327, ""longitude"": 72.34942}",{},True
+syn-gnb-01-001,gnodeb,gNodeB R1S1,Synthetic Region 1,active,syn-site-01-001,"[""syn-cell-01-001-01"", ""syn-cell-01-001-02""]","{""cells"": 2}",,{},True
+syn-gnb-01-002,gnodeb,gNodeB R1S2,Synthetic Region 1,active,syn-site-01-002,"[""syn-cell-01-002-01"", ""syn-cell-01-002-02""]","{""cells"": 2}",,{},True
+syn-k8s-01-edge,kubernetes_cluster,Edge Kubernetes Cluster 1,Synthetic Region 1,active,syn-region-01,"[""syn-amf-01-01"", ""syn-nssf-01-01"", ""syn-pcf-01-01"", ""syn-smf-01-01"", ""syn-upf-01-01""]",{},,{},True
+syn-link-01-001-01,transport_link,Backhaul Link R1S1C1,Synthetic Region 1,active,syn-cell-01-001-01,"[""syn-router-01-agg-01""]","{""gbps"": 10}",,{},True
+syn-link-01-001-02,transport_link,Backhaul Link R1S1C2,Synthetic Region 1,active,syn-cell-01-001-02,"[""syn-router-01-agg-01""]","{""gbps"": 10}",,{},True
+syn-link-01-002-01,transport_link,Backhaul Link R1S2C1,Synthetic Region 1,active,syn-cell-01-002-01,"[""syn-router-01-agg-01""]","{""gbps"": 10}",,{},True
+syn-link-01-002-02,transport_link,Backhaul Link R1S2C2,Synthetic Region 1,active,syn-cell-01-002-02,"[""syn-router-01-agg-01""]","{""gbps"": 10}",,{},True
+syn-market-01-01,market,Synthetic Market 1,Synthetic Region 1,active,syn-region-01,"[""syn-site-01-001"", ""syn-site-01-002""]",{},,{},True
+syn-nssf-01-01,nssf,NSSF 1,Synthetic Region 1,active,syn-k8s-01-edge,"[""syn-pod-nssf-01-01"", ""syn-pod-nssf-01-02""]","{""sessions"": 100000}",,{},True
+syn-pcf-01-01,pcf,PCF 1,Synthetic Region 1,active,syn-k8s-01-edge,"[""syn-pod-pcf-01-01"", ""syn-pod-pcf-01-02""]","{""sessions"": 100000}",,{},True
+syn-pod-amf-01-01,nf_pod,AMF Pod 1,Synthetic Region 1,active,syn-amf-01-01,[],"{""cpu_cores"": 4, ""memory_gb"": 16}",,"{""nf_type"": ""amf""}",True
+syn-pod-amf-01-02,nf_pod,AMF Pod 2,Synthetic Region 1,active,syn-amf-01-01,[],"{""cpu_cores"": 4, ""memory_gb"": 16}",,"{""nf_type"": ""amf""}",True
+syn-pod-nssf-01-01,nf_pod,NSSF Pod 1,Synthetic Region 1,active,syn-nssf-01-01,[],"{""cpu_cores"": 4, ""memory_gb"": 16}",,"{""nf_type"": ""nssf""}",True
+syn-pod-nssf-01-02,nf_pod,NSSF Pod 2,Synthetic Region 1,active,syn-nssf-01-01,[],"{""cpu_cores"": 4, ""memory_gb"": 16}",,"{""nf_type"": ""nssf""}",True
+syn-pod-pcf-01-01,nf_pod,PCF Pod 1,Synthetic Region 1,active,syn-pcf-01-01,[],"{""cpu_cores"": 4, ""memory_gb"": 16}",,"{""nf_type"": ""pcf""}",True
+syn-pod-pcf-01-02,nf_pod,PCF Pod 2,Synthetic Region 1,active,syn-pcf-01-01,[],"{""cpu_cores"": 4, ""memory_gb"": 16}",,"{""nf_type"": ""pcf""}",True
+syn-pod-smf-01-01,nf_pod,SMF Pod 1,Synthetic Region 1,active,syn-smf-01-01,[],"{""cpu_cores"": 4, ""memory_gb"": 16}",,"{""nf_type"": ""smf""}",True
+syn-pod-smf-01-02,nf_pod,SMF Pod 2,Synthetic Region 1,active,syn-smf-01-01,[],"{""cpu_cores"": 4, ""memory_gb"": 16}",,"{""nf_type"": ""smf""}",True
+syn-pod-upf-01-01,nf_pod,UPF Pod 1,Synthetic Region 1,active,syn-upf-01-01,[],"{""cpu_cores"": 4, ""memory_gb"": 16}",,"{""nf_type"": ""upf""}",True
+syn-pod-upf-01-02,nf_pod,UPF Pod 2,Synthetic Region 1,active,syn-upf-01-01,[],"{""cpu_cores"": 4, ""memory_gb"": 16}",,"{""nf_type"": ""upf""}",True
+syn-region-01,region,Synthetic Region 1,Synthetic Region 1,active,,"[""syn-k8s-01-edge"", ""syn-market-01-01"", ""syn-router-01-agg-01""]",{},"{""latitude"": 14.56971, ""longitude"": 72.26251}",{},True
+syn-router-01-agg-01,router,Aggregation Router 1,Synthetic Region 1,active,syn-region-01,"[""syn-upf-01-01""]","{""gbps"": 400}",,{},True
+syn-segment-01-01,customer_segment,Synthetic Customer Segment 1,Synthetic Region 1,active,syn-slice-01-embb,[],{},,"{""segment"": ""consumer""}",True
+syn-segment-01-02,customer_segment,Synthetic Customer Segment 2,Synthetic Region 1,active,syn-slice-01-urllc,[],{},,"{""segment"": ""enterprise""}",True
+syn-segment-01-03,customer_segment,Synthetic Customer Segment 3,Synthetic Region 1,active,syn-slice-01-miot,[],{},,"{""segment"": ""iot""}",True
+syn-site-01-001,site,Synthetic Site R1S1,Synthetic Region 1,active,syn-market-01-01,"[""syn-gnb-01-001""]","{""sectors"": 2}","{""latitude"": 14.38751, ""longitude"": 72.36161}",{},True
+syn-site-01-002,site,Synthetic Site R1S2,Synthetic Region 1,active,syn-market-01-01,"[""syn-gnb-01-002""]","{""sectors"": 2}","{""latitude"": 14.46096, ""longitude"": 72.2649}",{},True
+syn-slice-01-embb,service_slice,Synthetic EMBB Slice,Synthetic Region 1,active,syn-upf-01-01,"[""syn-nssf-01-01"", ""syn-pcf-01-01"", ""syn-segment-01-01"", ""syn-smf-01-01"", ""syn-upf-01-01""]","{""sla_target_pct"": 99.5}",,"{""slice_type"": ""embb""}",True
+syn-slice-01-miot,service_slice,Synthetic MIOT Slice,Synthetic Region 1,active,syn-upf-01-01,"[""syn-nssf-01-01"", ""syn-pcf-01-01"", ""syn-segment-01-03"", ""syn-smf-01-01"", ""syn-upf-01-01""]","{""sla_target_pct"": 99.5}",,"{""slice_type"": ""miot""}",True
+syn-slice-01-urllc,service_slice,Synthetic URLLC Slice,Synthetic Region 1,active,syn-upf-01-01,"[""syn-nssf-01-01"", ""syn-pcf-01-01"", ""syn-segment-01-02"", ""syn-smf-01-01"", ""syn-upf-01-01""]","{""sla_target_pct"": 99.5}",,"{""slice_type"": ""urllc""}",True
+syn-smf-01-01,smf,SMF 1,Synthetic Region 1,active,syn-k8s-01-edge,"[""syn-amf-01-01"", ""syn-pod-smf-01-01"", ""syn-pod-smf-01-02""]","{""sessions"": 100000}",,{},True
+syn-upf-01-01,upf,UPF 1,Synthetic Region 1,active,syn-k8s-01-edge,"[""syn-pod-upf-01-01"", ""syn-pod-upf-01-02"", ""syn-smf-01-01""]","{""sessions"": 100000}",,{},True

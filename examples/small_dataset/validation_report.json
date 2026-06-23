@@ -1,0 +1,19 @@
+{
+  "counts": {
+    "alarms": 1,
+    "cloud_kpis": 424,
+    "core_kpis": 112,
+    "incidents": 1,
+    "oss_kpis": 168,
+    "ran_kpis": 352,
+    "service_impact": 1,
+    "topology_entities": 37,
+    "topology_relationships": 55,
+    "transport_kpis": 280
+  },
+  "errors": [],
+  "scenario": "ran_congestion",
+  "synthetic": true,
+  "valid": true,
+  "warnings": []
+}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel">
+  <h1>Topology Summary</h1>
+  <table>
+    {% for key, value in counts.items() %}
+    <tr><td>{{ key }}</td><td>{{ value }}</td></tr>
+    {% endfor %}
+  </table>
+</section>
+<section>
+  <h2>Entities</h2>
+  <pre>{{ entities | tojson(indent=2) }}</pre>
+</section>
+{% endblock %}
+

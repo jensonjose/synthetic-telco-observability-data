@@ -1,0 +1,3 @@
+name: signaling_storm
+description: Control-plane overload with AMF/SMF CPU pressure and lower success rates.
+

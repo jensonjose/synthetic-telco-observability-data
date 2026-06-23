@@ -1,0 +1,2 @@
+timestamp,service_name,service_slice,region,affected_customer_segment,impacted_users_estimate,experience_score,sla_status,primary_symptom,related_incident_id,synthetic
+2026-01-01T01:45:00Z,Synthetic EMBB Service,syn-slice-01-embb,Synthetic Region 1,consumer,1800,72.0,at_risk,Reduced radio throughput and elevated call drops,syn-inc-ran_congestion-001,True

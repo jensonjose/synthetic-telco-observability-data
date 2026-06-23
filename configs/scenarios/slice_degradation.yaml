@@ -1,0 +1,3 @@
+name: slice_degradation
+description: Service slice SLA and experience degradation tied to synthetic services.
+

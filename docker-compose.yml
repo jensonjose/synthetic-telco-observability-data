@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./output:/app/output
+      - ./examples:/app/examples
+    environment:
+      - APP_OUTPUT_DIR=/app/output
+

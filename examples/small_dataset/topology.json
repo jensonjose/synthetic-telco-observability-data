@@ -1,0 +1,968 @@
+{
+  "entities": [
+    {
+      "attributes": {},
+      "capacity": {
+        "sessions": 100000
+      },
+      "child_ids": [
+        "syn-pod-amf-01-01",
+        "syn-pod-amf-01-02"
+      ],
+      "coordinates": null,
+      "id": "syn-amf-01-01",
+      "name": "AMF 1",
+      "parent_id": "syn-k8s-01-edge",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "amf"
+    },
+    {
+      "attributes": {},
+      "capacity": {
+        "bandwidth_mhz": 100,
+        "max_users": 1200
+      },
+      "child_ids": [
+        "syn-link-01-001-01"
+      ],
+      "coordinates": {
+        "latitude": 14.61824,
+        "longitude": 72.58835
+      },
+      "id": "syn-cell-01-001-01",
+      "name": "Cell R1S1C1",
+      "parent_id": "syn-gnb-01-001",
+      "region": "Synthetic Region 1",
+      "status": "degraded",
+      "synthetic": true,
+      "type": "cell"
+    },
+    {
+      "attributes": {},
+      "capacity": {
+        "bandwidth_mhz": 100,
+        "max_users": 1200
+      },
+      "child_ids": [
+        "syn-link-01-001-02"
+      ],
+      "coordinates": {
+        "latitude": 14.69609,
+        "longitude": 72.29347
+      },
+      "id": "syn-cell-01-001-02",
+      "name": "Cell R1S1C2",
+      "parent_id": "syn-gnb-01-001",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "cell"
+    },
+    {
+      "attributes": {},
+      "capacity": {
+        "bandwidth_mhz": 100,
+        "max_users": 1200
+      },
+      "child_ids": [
+        "syn-link-01-002-01"
+      ],
+      "coordinates": {
+        "latitude": 14.35932,
+        "longitude": 72.50268
+      },
+      "id": "syn-cell-01-002-01",
+      "name": "Cell R1S2C1",
+      "parent_id": "syn-gnb-01-002",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "cell"
+    },
+    {
+      "attributes": {},
+      "capacity": {
+        "bandwidth_mhz": 100,
+        "max_users": 1200
+      },
+      "child_ids": [
+        "syn-link-01-002-02"
+      ],
+      "coordinates": {
+        "latitude": 14.26327,
+        "longitude": 72.34942
+      },
+      "id": "syn-cell-01-002-02",
+      "name": "Cell R1S2C2",
+      "parent_id": "syn-gnb-01-002",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "cell"
+    },
+    {
+      "attributes": {},
+      "capacity": {
+        "cells": 2
+      },
+      "child_ids": [
+        "syn-cell-01-001-01",
+        "syn-cell-01-001-02"
+      ],
+      "coordinates": null,
+      "id": "syn-gnb-01-001",
+      "name": "gNodeB R1S1",
+      "parent_id": "syn-site-01-001",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "gnodeb"
+    },
+    {
+      "attributes": {},
+      "capacity": {
+        "cells": 2
+      },
+      "child_ids": [
+        "syn-cell-01-002-01",
+        "syn-cell-01-002-02"
+      ],
+      "coordinates": null,
+      "id": "syn-gnb-01-002",
+      "name": "gNodeB R1S2",
+      "parent_id": "syn-site-01-002",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "gnodeb"
+    },
+    {
+      "attributes": {},
+      "capacity": {},
+      "child_ids": [
+        "syn-amf-01-01",
+        "syn-nssf-01-01",
+        "syn-pcf-01-01",
+        "syn-smf-01-01",
+        "syn-upf-01-01"
+      ],
+      "coordinates": null,
+      "id": "syn-k8s-01-edge",
+      "name": "Edge Kubernetes Cluster 1",
+      "parent_id": "syn-region-01",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "kubernetes_cluster"
+    },
+    {
+      "attributes": {},
+      "capacity": {
+        "gbps": 10
+      },
+      "child_ids": [
+        "syn-router-01-agg-01"
+      ],
+      "coordinates": null,
+      "id": "syn-link-01-001-01",
+      "name": "Backhaul Link R1S1C1",
+      "parent_id": "syn-cell-01-001-01",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "transport_link"
+    },
+    {
+      "attributes": {},
+      "capacity": {
+        "gbps": 10
+      },
+      "child_ids": [
+        "syn-router-01-agg-01"
+      ],
+      "coordinates": null,
+      "id": "syn-link-01-001-02",
+      "name": "Backhaul Link R1S1C2",
+      "parent_id": "syn-cell-01-001-02",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "transport_link"
+    },
+    {
+      "attributes": {},
+      "capacity": {
+        "gbps": 10
+      },
+      "child_ids": [
+        "syn-router-01-agg-01"
+      ],
+      "coordinates": null,
+      "id": "syn-link-01-002-01",
+      "name": "Backhaul Link R1S2C1",
+      "parent_id": "syn-cell-01-002-01",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "transport_link"
+    },
+    {
+      "attributes": {},
+      "capacity": {
+        "gbps": 10
+      },
+      "child_ids": [
+        "syn-router-01-agg-01"
+      ],
+      "coordinates": null,
+      "id": "syn-link-01-002-02",
+      "name": "Backhaul Link R1S2C2",
+      "parent_id": "syn-cell-01-002-02",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "transport_link"
+    },
+    {
+      "attributes": {},
+      "capacity": {},
+      "child_ids": [
+        "syn-site-01-001",
+        "syn-site-01-002"
+      ],
+      "coordinates": null,
+      "id": "syn-market-01-01",
+      "name": "Synthetic Market 1",
+      "parent_id": "syn-region-01",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "market"
+    },
+    {
+      "attributes": {},
+      "capacity": {
+        "sessions": 100000
+      },
+      "child_ids": [
+        "syn-pod-nssf-01-01",
+        "syn-pod-nssf-01-02"
+      ],
+      "coordinates": null,
+      "id": "syn-nssf-01-01",
+      "name": "NSSF 1",
+      "parent_id": "syn-k8s-01-edge",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "nssf"
+    },
+    {
+      "attributes": {},
+      "capacity": {
+        "sessions": 100000
+      },
+      "child_ids": [
+        "syn-pod-pcf-01-01",
+        "syn-pod-pcf-01-02"
+      ],
+      "coordinates": null,
+      "id": "syn-pcf-01-01",
+      "name": "PCF 1",
+      "parent_id": "syn-k8s-01-edge",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "pcf"
+    },
+    {
+      "attributes": {
+        "nf_type": "amf"
+      },
+      "capacity": {
+        "cpu_cores": 4,
+        "memory_gb": 16
+      },
+      "child_ids": [],
+      "coordinates": null,
+      "id": "syn-pod-amf-01-01",
+      "name": "AMF Pod 1",
+      "parent_id": "syn-amf-01-01",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "nf_pod"
+    },
+    {
+      "attributes": {
+        "nf_type": "amf"
+      },
+      "capacity": {
+        "cpu_cores": 4,
+        "memory_gb": 16
+      },
+      "child_ids": [],
+      "coordinates": null,
+      "id": "syn-pod-amf-01-02",
+      "name": "AMF Pod 2",
+      "parent_id": "syn-amf-01-01",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "nf_pod"
+    },
+    {
+      "attributes": {
+        "nf_type": "nssf"
+      },
+      "capacity": {
+        "cpu_cores": 4,
+        "memory_gb": 16
+      },
+      "child_ids": [],
+      "coordinates": null,
+      "id": "syn-pod-nssf-01-01",
+      "name": "NSSF Pod 1",
+      "parent_id": "syn-nssf-01-01",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "nf_pod"
+    },
+    {
+      "attributes": {
+        "nf_type": "nssf"
+      },
+      "capacity": {
+        "cpu_cores": 4,
+        "memory_gb": 16
+      },
+      "child_ids": [],
+      "coordinates": null,
+      "id": "syn-pod-nssf-01-02",
+      "name": "NSSF Pod 2",
+      "parent_id": "syn-nssf-01-01",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "nf_pod"
+    },
+    {
+      "attributes": {
+        "nf_type": "pcf"
+      },
+      "capacity": {
+        "cpu_cores": 4,
+        "memory_gb": 16
+      },
+      "child_ids": [],
+      "coordinates": null,
+      "id": "syn-pod-pcf-01-01",
+      "name": "PCF Pod 1",
+      "parent_id": "syn-pcf-01-01",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "nf_pod"
+    },
+    {
+      "attributes": {
+        "nf_type": "pcf"
+      },
+      "capacity": {
+        "cpu_cores": 4,
+        "memory_gb": 16
+      },
+      "child_ids": [],
+      "coordinates": null,
+      "id": "syn-pod-pcf-01-02",
+      "name": "PCF Pod 2",
+      "parent_id": "syn-pcf-01-01",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "nf_pod"
+    },
+    {
+      "attributes": {
+        "nf_type": "smf"
+      },
+      "capacity": {
+        "cpu_cores": 4,
+        "memory_gb": 16
+      },
+      "child_ids": [],
+      "coordinates": null,
+      "id": "syn-pod-smf-01-01",
+      "name": "SMF Pod 1",
+      "parent_id": "syn-smf-01-01",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "nf_pod"
+    },
+    {
+      "attributes": {
+        "nf_type": "smf"
+      },
+      "capacity": {
+        "cpu_cores": 4,
+        "memory_gb": 16
+      },
+      "child_ids": [],
+      "coordinates": null,
+      "id": "syn-pod-smf-01-02",
+      "name": "SMF Pod 2",
+      "parent_id": "syn-smf-01-01",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "nf_pod"
+    },
+    {
+      "attributes": {
+        "nf_type": "upf"
+      },
+      "capacity": {
+        "cpu_cores": 4,
+        "memory_gb": 16
+      },
+      "child_ids": [],
+      "coordinates": null,
+      "id": "syn-pod-upf-01-01",
+      "name": "UPF Pod 1",
+      "parent_id": "syn-upf-01-01",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "nf_pod"
+    },
+    {
+      "attributes": {
+        "nf_type": "upf"
+      },
+      "capacity": {
+        "cpu_cores": 4,
+        "memory_gb": 16
+      },
+      "child_ids": [],
+      "coordinates": null,
+      "id": "syn-pod-upf-01-02",
+      "name": "UPF Pod 2",
+      "parent_id": "syn-upf-01-01",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "nf_pod"
+    },
+    {
+      "attributes": {},
+      "capacity": {},
+      "child_ids": [
+        "syn-k8s-01-edge",
+        "syn-market-01-01",
+        "syn-router-01-agg-01"
+      ],
+      "coordinates": {
+        "latitude": 14.56971,
+        "longitude": 72.26251
+      },
+      "id": "syn-region-01",
+      "name": "Synthetic Region 1",
+      "parent_id": null,
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "region"
+    },
+    {
+      "attributes": {},
+      "capacity": {
+        "gbps": 400
+      },
+      "child_ids": [
+        "syn-upf-01-01"
+      ],
+      "coordinates": null,
+      "id": "syn-router-01-agg-01",
+      "name": "Aggregation Router 1",
+      "parent_id": "syn-region-01",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "router"
+    },
+    {
+      "attributes": {
+        "segment": "consumer"
+      },
+      "capacity": {},
+      "child_ids": [],
+      "coordinates": null,
+      "id": "syn-segment-01-01",
+      "name": "Synthetic Customer Segment 1",
+      "parent_id": "syn-slice-01-embb",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "customer_segment"
+    },
+    {
+      "attributes": {
+        "segment": "enterprise"
+      },
+      "capacity": {},
+      "child_ids": [],
+      "coordinates": null,
+      "id": "syn-segment-01-02",
+      "name": "Synthetic Customer Segment 2",
+      "parent_id": "syn-slice-01-urllc",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "customer_segment"
+    },
+    {
+      "attributes": {
+        "segment": "iot"
+      },
+      "capacity": {},
+      "child_ids": [],
+      "coordinates": null,
+      "id": "syn-segment-01-03",
+      "name": "Synthetic Customer Segment 3",
+      "parent_id": "syn-slice-01-miot",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "customer_segment"
+    },
+    {
+      "attributes": {},
+      "capacity": {
+        "sectors": 2
+      },
+      "child_ids": [
+        "syn-gnb-01-001"
+      ],
+      "coordinates": {
+        "latitude": 14.38751,
+        "longitude": 72.36161
+      },
+      "id": "syn-site-01-001",
+      "name": "Synthetic Site R1S1",
+      "parent_id": "syn-market-01-01",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "site"
+    },
+    {
+      "attributes": {},
+      "capacity": {
+        "sectors": 2
+      },
+      "child_ids": [
+        "syn-gnb-01-002"
+      ],
+      "coordinates": {
+        "latitude": 14.46096,
+        "longitude": 72.2649
+      },
+      "id": "syn-site-01-002",
+      "name": "Synthetic Site R1S2",
+      "parent_id": "syn-market-01-01",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "site"
+    },
+    {
+      "attributes": {
+        "slice_type": "embb"
+      },
+      "capacity": {
+        "sla_target_pct": 99.5
+      },
+      "child_ids": [
+        "syn-nssf-01-01",
+        "syn-pcf-01-01",
+        "syn-segment-01-01",
+        "syn-smf-01-01",
+        "syn-upf-01-01"
+      ],
+      "coordinates": null,
+      "id": "syn-slice-01-embb",
+      "name": "Synthetic EMBB Slice",
+      "parent_id": "syn-upf-01-01",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "service_slice"
+    },
+    {
+      "attributes": {
+        "slice_type": "miot"
+      },
+      "capacity": {
+        "sla_target_pct": 99.5
+      },
+      "child_ids": [
+        "syn-nssf-01-01",
+        "syn-pcf-01-01",
+        "syn-segment-01-03",
+        "syn-smf-01-01",
+        "syn-upf-01-01"
+      ],
+      "coordinates": null,
+      "id": "syn-slice-01-miot",
+      "name": "Synthetic MIOT Slice",
+      "parent_id": "syn-upf-01-01",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "service_slice"
+    },
+    {
+      "attributes": {
+        "slice_type": "urllc"
+      },
+      "capacity": {
+        "sla_target_pct": 99.5
+      },
+      "child_ids": [
+        "syn-nssf-01-01",
+        "syn-pcf-01-01",
+        "syn-segment-01-02",
+        "syn-smf-01-01",
+        "syn-upf-01-01"
+      ],
+      "coordinates": null,
+      "id": "syn-slice-01-urllc",
+      "name": "Synthetic URLLC Slice",
+      "parent_id": "syn-upf-01-01",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "service_slice"
+    },
+    {
+      "attributes": {},
+      "capacity": {
+        "sessions": 100000
+      },
+      "child_ids": [
+        "syn-amf-01-01",
+        "syn-pod-smf-01-01",
+        "syn-pod-smf-01-02"
+      ],
+      "coordinates": null,
+      "id": "syn-smf-01-01",
+      "name": "SMF 1",
+      "parent_id": "syn-k8s-01-edge",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "smf"
+    },
+    {
+      "attributes": {},
+      "capacity": {
+        "sessions": 100000
+      },
+      "child_ids": [
+        "syn-pod-upf-01-01",
+        "syn-pod-upf-01-02",
+        "syn-smf-01-01"
+      ],
+      "coordinates": null,
+      "id": "syn-upf-01-01",
+      "name": "UPF 1",
+      "parent_id": "syn-k8s-01-edge",
+      "region": "Synthetic Region 1",
+      "status": "active",
+      "synthetic": true,
+      "type": "upf"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship": "has_pod",
+      "source_id": "syn-amf-01-01",
+      "target_id": "syn-pod-amf-01-01"
+    },
+    {
+      "relationship": "has_pod",
+      "source_id": "syn-amf-01-01",
+      "target_id": "syn-pod-amf-01-02"
+    },
+    {
+      "relationship": "uses_backhaul",
+      "source_id": "syn-cell-01-001-01",
+      "target_id": "syn-link-01-001-01"
+    },
+    {
+      "relationship": "uses_backhaul",
+      "source_id": "syn-cell-01-001-02",
+      "target_id": "syn-link-01-001-02"
+    },
+    {
+      "relationship": "uses_backhaul",
+      "source_id": "syn-cell-01-002-01",
+      "target_id": "syn-link-01-002-01"
+    },
+    {
+      "relationship": "uses_backhaul",
+      "source_id": "syn-cell-01-002-02",
+      "target_id": "syn-link-01-002-02"
+    },
+    {
+      "relationship": "serves",
+      "source_id": "syn-gnb-01-001",
+      "target_id": "syn-cell-01-001-01"
+    },
+    {
+      "relationship": "serves",
+      "source_id": "syn-gnb-01-001",
+      "target_id": "syn-cell-01-001-02"
+    },
+    {
+      "relationship": "serves",
+      "source_id": "syn-gnb-01-002",
+      "target_id": "syn-cell-01-002-01"
+    },
+    {
+      "relationship": "serves",
+      "source_id": "syn-gnb-01-002",
+      "target_id": "syn-cell-01-002-02"
+    },
+    {
+      "relationship": "runs",
+      "source_id": "syn-k8s-01-edge",
+      "target_id": "syn-amf-01-01"
+    },
+    {
+      "relationship": "runs",
+      "source_id": "syn-k8s-01-edge",
+      "target_id": "syn-nssf-01-01"
+    },
+    {
+      "relationship": "runs",
+      "source_id": "syn-k8s-01-edge",
+      "target_id": "syn-pcf-01-01"
+    },
+    {
+      "relationship": "runs",
+      "source_id": "syn-k8s-01-edge",
+      "target_id": "syn-smf-01-01"
+    },
+    {
+      "relationship": "runs",
+      "source_id": "syn-k8s-01-edge",
+      "target_id": "syn-upf-01-01"
+    },
+    {
+      "relationship": "connects_to",
+      "source_id": "syn-link-01-001-01",
+      "target_id": "syn-router-01-agg-01"
+    },
+    {
+      "relationship": "connects_to",
+      "source_id": "syn-link-01-001-02",
+      "target_id": "syn-router-01-agg-01"
+    },
+    {
+      "relationship": "connects_to",
+      "source_id": "syn-link-01-002-01",
+      "target_id": "syn-router-01-agg-01"
+    },
+    {
+      "relationship": "connects_to",
+      "source_id": "syn-link-01-002-02",
+      "target_id": "syn-router-01-agg-01"
+    },
+    {
+      "relationship": "contains",
+      "source_id": "syn-market-01-01",
+      "target_id": "syn-site-01-001"
+    },
+    {
+      "relationship": "contains",
+      "source_id": "syn-market-01-01",
+      "target_id": "syn-site-01-002"
+    },
+    {
+      "relationship": "has_pod",
+      "source_id": "syn-nssf-01-01",
+      "target_id": "syn-pod-nssf-01-01"
+    },
+    {
+      "relationship": "has_pod",
+      "source_id": "syn-nssf-01-01",
+      "target_id": "syn-pod-nssf-01-02"
+    },
+    {
+      "relationship": "has_pod",
+      "source_id": "syn-pcf-01-01",
+      "target_id": "syn-pod-pcf-01-01"
+    },
+    {
+      "relationship": "has_pod",
+      "source_id": "syn-pcf-01-01",
+      "target_id": "syn-pod-pcf-01-02"
+    },
+    {
+      "relationship": "hosts",
+      "source_id": "syn-region-01",
+      "target_id": "syn-k8s-01-edge"
+    },
+    {
+      "relationship": "contains",
+      "source_id": "syn-region-01",
+      "target_id": "syn-market-01-01"
+    },
+    {
+      "relationship": "contains",
+      "source_id": "syn-region-01",
+      "target_id": "syn-router-01-agg-01"
+    },
+    {
+      "relationship": "connects_to",
+      "source_id": "syn-router-01-agg-01",
+      "target_id": "syn-upf-01-01"
+    },
+    {
+      "relationship": "connects_to",
+      "source_id": "syn-router-01-agg-01",
+      "target_id": "syn-upf-01-01"
+    },
+    {
+      "relationship": "connects_to",
+      "source_id": "syn-router-01-agg-01",
+      "target_id": "syn-upf-01-01"
+    },
+    {
+      "relationship": "connects_to",
+      "source_id": "syn-router-01-agg-01",
+      "target_id": "syn-upf-01-01"
+    },
+    {
+      "relationship": "hosts",
+      "source_id": "syn-site-01-001",
+      "target_id": "syn-gnb-01-001"
+    },
+    {
+      "relationship": "hosts",
+      "source_id": "syn-site-01-002",
+      "target_id": "syn-gnb-01-002"
+    },
+    {
+      "relationship": "depends_on",
+      "source_id": "syn-slice-01-embb",
+      "target_id": "syn-nssf-01-01"
+    },
+    {
+      "relationship": "depends_on",
+      "source_id": "syn-slice-01-embb",
+      "target_id": "syn-pcf-01-01"
+    },
+    {
+      "relationship": "serves",
+      "source_id": "syn-slice-01-embb",
+      "target_id": "syn-segment-01-01"
+    },
+    {
+      "relationship": "depends_on",
+      "source_id": "syn-slice-01-embb",
+      "target_id": "syn-smf-01-01"
+    },
+    {
+      "relationship": "depends_on",
+      "source_id": "syn-slice-01-embb",
+      "target_id": "syn-upf-01-01"
+    },
+    {
+      "relationship": "depends_on",
+      "source_id": "syn-slice-01-miot",
+      "target_id": "syn-nssf-01-01"
+    },
+    {
+      "relationship": "depends_on",
+      "source_id": "syn-slice-01-miot",
+      "target_id": "syn-pcf-01-01"
+    },
+    {
+      "relationship": "serves",
+      "source_id": "syn-slice-01-miot",
+      "target_id": "syn-segment-01-03"
+    },
+    {
+      "relationship": "depends_on",
+      "source_id": "syn-slice-01-miot",
+      "target_id": "syn-smf-01-01"
+    },
+    {
+      "relationship": "depends_on",
+      "source_id": "syn-slice-01-miot",
+      "target_id": "syn-upf-01-01"
+    },
+    {
+      "relationship": "depends_on",
+      "source_id": "syn-slice-01-urllc",
+      "target_id": "syn-nssf-01-01"
+    },
+    {
+      "relationship": "depends_on",
+      "source_id": "syn-slice-01-urllc",
+      "target_id": "syn-pcf-01-01"
+    },
+    {
+      "relationship": "serves",
+      "source_id": "syn-slice-01-urllc",
+      "target_id": "syn-segment-01-02"
+    },
+    {
+      "relationship": "depends_on",
+      "source_id": "syn-slice-01-urllc",
+      "target_id": "syn-smf-01-01"
+    },
+    {
+      "relationship": "depends_on",
+      "source_id": "syn-slice-01-urllc",
+      "target_id": "syn-upf-01-01"
+    },
+    {
+      "relationship": "controlled_by",
+      "source_id": "syn-smf-01-01",
+      "target_id": "syn-amf-01-01"
+    },
+    {
+      "relationship": "has_pod",
+      "source_id": "syn-smf-01-01",
+      "target_id": "syn-pod-smf-01-01"
+    },
+    {
+      "relationship": "has_pod",
+      "source_id": "syn-smf-01-01",
+      "target_id": "syn-pod-smf-01-02"
+    },
+    {
+      "relationship": "has_pod",
+      "source_id": "syn-upf-01-01",
+      "target_id": "syn-pod-upf-01-01"
+    },
+    {
+      "relationship": "has_pod",
+      "source_id": "syn-upf-01-01",
+      "target_id": "syn-pod-upf-01-02"
+    },
+    {
+      "relationship": "served_by",
+      "source_id": "syn-upf-01-01",
+      "target_id": "syn-smf-01-01"
+    }
+  ],
+  "synthetic": true
+}

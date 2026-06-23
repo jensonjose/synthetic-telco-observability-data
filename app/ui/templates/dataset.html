@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel">
+  <h1>Dataset Preview</h1>
+  {% if report %}
+  <p>Validation: <strong>{{ "passed" if report.valid else "failed" }}</strong> | Scenario: {{ report.scenario }}</p>
+  <table>
+    {% for key, value in report.counts.items() %}
+    <tr><td>{{ key }}</td><td>{{ value }}</td></tr>
+    {% endfor %}
+  </table>
+  {% else %}
+  <p>No dataset has been generated yet.</p>
+  {% endif %}
+</section>
+<section>
+  <h2>Files</h2>
+  <ul>
+    {% for file in files %}
+    <li><a href="/download/{{ file }}">{{ file }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+{% for name, rows in previews.items() %}
+<section>
+  <h2>{{ name }}</h2>
+  <pre>{{ rows | tojson(indent=2) }}</pre>
+</section>
+{% endfor %}
+{% endblock %}
+
