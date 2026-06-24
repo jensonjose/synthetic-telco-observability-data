@@ -27,7 +27,7 @@
       </div>
       <span class="data-mono">JSONL + CSV</span>
     </div>
-    <form method="post" action="/generate" class="form-grid">
+    <form method="post" action="/generate" class="form-grid" data-generating-form>
       <label>Scenario
         <select name="scenario">
           {% for scenario in scenarios %}
@@ -41,7 +41,14 @@
       <label>Sites per region <input name="sites_per_region" type="number" value="2" min="1"></label>
       <label>Cells per site <input name="cells_per_site" type="number" value="2" min="1"></label>
       <label>Seed <input name="seed" type="number" value="42" min="0"></label>
-      <button class="primary-action" type="submit">Generate Dataset</button>
+      <button class="primary-action" type="submit" data-submit-label="Generate Dataset" data-loading-label="Generating...">Generate Dataset</button>
+      <div class="generation-progress" role="status" aria-live="polite" aria-hidden="true">
+        <div class="generation-progress-header">
+          <span class="label-mono accent-blue">[ GENERATING DATASET ]</span>
+          <span class="data-mono">topology + KPIs + validation</span>
+        </div>
+        <div class="progress-track"><div class="progress-bar"></div></div>
+      </div>
     </form>
   </div>
 

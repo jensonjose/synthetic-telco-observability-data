@@ -9,6 +9,7 @@ def test_ui_home_loads() -> None:
     response = TestClient(app).get("/")
     assert response.status_code == 200
     assert "Synthetic Telco Observability Data" in response.text
+    assert "GENERATING DATASET" in response.text
 
 
 def test_ui_can_generate_dataset() -> None:

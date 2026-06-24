@@ -33,6 +33,23 @@
           });
         });
       });
+      document.querySelectorAll("[data-generating-form]").forEach((form) => {
+        form.addEventListener("submit", () => {
+          const button = form.querySelector("[type='submit']");
+          const progress = form.querySelector(".generation-progress");
+          form.classList.add("is-generating");
+          form.querySelectorAll("input, select, button").forEach((field) => {
+            field.setAttribute("aria-disabled", "true");
+          });
+          if (button) {
+            button.textContent = button.getAttribute("data-loading-label") || "Generating...";
+            button.setAttribute("disabled", "disabled");
+          }
+          if (progress) {
+            progress.setAttribute("aria-hidden", "false");
+          }
+        });
+      });
     </script>
   </body>
 </html>
