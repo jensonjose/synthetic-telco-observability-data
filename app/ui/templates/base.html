@@ -4,15 +4,35 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Synthetic Telco Observability Data</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@700;900&family=IBM+Plex+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/app.css">
   </head>
   <body>
-    <header>
-      <a href="/">Generator</a>
-      <a href="/dataset">Dataset</a>
-      <a href="/topology">Topology</a>
+    <header class="topbar">
+      <a class="brand" href="/">Telco Lab <span>synthetic data</span></a>
+      <nav aria-label="Primary navigation">
+        <a href="/">Generator</a>
+        <a href="/dataset">Dataset</a>
+        <a href="/topology">Topology</a>
+      </nav>
     </header>
-    <main>{% block content %}{% endblock %}</main>
+    <main class="shell scanline-fade">{% block content %}{% endblock %}</main>
+    <script>
+      document.querySelectorAll("[data-tab-target]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const group = button.closest("[data-tabs]");
+          if (!group) return;
+          const target = button.getAttribute("data-tab-target");
+          const buttons = group.querySelectorAll(":scope > .tabbar [data-tab-target]");
+          const panels = group.querySelectorAll(":scope > [data-tab-panel]");
+          buttons.forEach((item) => item.classList.toggle("is-active", item === button));
+          panels.forEach((panel) => {
+            panel.classList.toggle("is-active", panel.getAttribute("data-tab-panel") === target);
+          });
+        });
+      });
+    </script>
   </body>
 </html>
-

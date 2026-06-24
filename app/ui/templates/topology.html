@@ -1,16 +1,50 @@
 {% extends "base.html" %}
 {% block content %}
-<section class="panel">
-  <h1>Topology Summary</h1>
-  <table>
-    {% for key, value in counts.items() %}
-    <tr><td>{{ key }}</td><td>{{ value }}</td></tr>
-    {% endfor %}
-  </table>
+<section class="page-heading">
+  <div>
+    <div class="label-mono accent-cyan">[ TOPOLOGY ]</div>
+    <h1>Topology Summary</h1>
+    <p>Entity counts and sample topology records from the latest generated dataset.</p>
+  </div>
+  <div class="status-card">
+    <span class="badge badge-info">{{ counts | length }} entity types</span>
+    <span class="data-mono">{{ entities | length }} sampled</span>
+  </div>
 </section>
-<section>
-  <h2>Entities</h2>
-  <pre>{{ entities | tojson(indent=2) }}</pre>
+
+<section class="panel" data-tabs>
+  <div class="tabbar" role="tablist" aria-label="Topology sections">
+    <button class="tab is-active" type="button" data-tab-target="summary">Summary</button>
+    <button class="tab" type="button" data-tab-target="entities">Entities</button>
+  </div>
+
+  <div class="tab-panel is-active" data-tab-panel="summary">
+    {% if counts %}
+    <div class="stats-grid">
+      {% for key, value in counts.items() %}
+      <div class="stat-cell">
+        <div class="label-mono">{{ key }}</div>
+        <div class="stat-number">{{ value }}</div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state">
+      <div class="label-mono">[ NO TOPOLOGY YET ]</div>
+      <p>Generate a dataset first to inspect topology.</p>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="tab-panel" data-tab-panel="entities">
+    <div class="section-title">
+      <div>
+        <div class="label-mono accent-blue">[ ENTITY SAMPLE ]</div>
+        <h2>Topology records</h2>
+      </div>
+      <span class="data-mono">first {{ entities | length }}</span>
+    </div>
+    <pre>{{ entities | tojson(indent=2) }}</pre>
+  </div>
 </section>
 {% endblock %}
-
